@@ -2,15 +2,15 @@ ink-tools
 =========
 > Compile inkle's story [Ink](https://github.com/inkle/ink) file into JSON, with watching mode. 
 
-![ink-tools CLI application](./ink-tools.png)
+![ink-tools CLI application](./doc/ink-tools.png)
 
 ## Features
-ink-utils is a CLI application built in node.js with [commander.js](https://github.com/tj/commander.js/).
+ink-utils is a CLI application built in node.js with [commander.js](https://github.com/tj/commander.js/). It was designed in order to facilitate its integration wiht [inkjs](https://github.com/y-lohse/inkjs), the javascript implementation of inkle's ink scripting language, and to consume ink story into a web application (SPA, React, Angular ...)
 
-It is designed in order to facilitate its integration wiht [inkjs](https://github.com/y-lohse/inkjs), the javascript implementation of inkle's ink scripting language, and to consume ink story into a web application (SPA, React, Angular ...)
+ink-utils can :
 
 - Compile a ink file into Json.
-- Watch for ink file changes, in order to perform compilation each time. It depends on comparison of ink file MD5 checksums.
+- Watch for ink file changes, in order to perform compilation each time.
 
 ## Installation
 
@@ -68,23 +68,16 @@ $ ink-tools compile .\ink\story-basic.ink -v --output .\myStory.json
 
 ### Watch for ink file change
 
-To enable watch mode, just add `--watch` option in `compile` command. The program can listen for ink file changes and start compilation each time it detects changement. 
-
-It use an MD5 checksum of the file in order to check if the file has really changed.
+To enable watch mode, just add `--watch` option in `compile` command. 
 
 ```sh
-$ ink-tools compile .\ink\story-basic.ink --watch --verbose
-
-=== Start watching ink file ===
-[info] Ink name file: story-basic.ink
-[info] Ink path file: D:\6i\ink-tools\ink\story-basic.ink
-[info] Output JSON: D:\6i\ink-tools\ink\story-basic.json
-[info] Inklecate bin: D:\6i\ink-tools\bin\inklecate\inklecate_win.exe
-
-=== Detecting changement in Ink file "story-basic.ink" ===
-[info] Ink compilation is starting.
-[success] Inklecate compilation has finished !
+$ ink-tools compile .\ink\story-basic.ink --watch -v
 ```
+
+The program can listen for ink file changes and start compilation each time it detects changement. It use an MD5 checksum of the file in order to check if the file has really changed.
+
+![ink-tools CLI application](./doc/ink-tools_watch.gif)
+
 
 ## Ink story
 
