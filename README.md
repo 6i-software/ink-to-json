@@ -1,5 +1,4 @@
-
-ink-utils
+ink-tools
 =========
 > Compile inkle's story [Ink](https://github.com/inkle/ink) file into JSON, with watching mode. 
 
@@ -17,12 +16,12 @@ Install with [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/).
 
 Global installation:
 ```sh
-$ yarn global add @6i/ink-utils
+$ yarn global add @6i/ink-tools
 ```
 
 As local developpement dependencies:
 ```sh
-$ yarn add @6i/ink-utils --dev
+$ yarn add @6i/ink-tools --dev
 ```
 
 ## Ink story

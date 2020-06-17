@@ -1,0 +1,44 @@
+{
+  "name": "@6i/ink-tools",
+  "version": "1.0.0",
+  "description": "Utilities to compile story Ink file into JSON.",
+  "main": "index.js",
+  "bin": {
+    "ink-tools": "index.js"
+  },
+  "author": "v20100v <vb20100bv@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/v20100v/ink-tools",
+  "repository": {
+    "url": "https://github.com/v20100v/ink-tools.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/v20100v/ink-tools/issues"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "md5": "^2.2.1",
+    "shelljs": "^0.8.4",
+    "word-wrap": "^1.2.3"
+  },
+  "engines": {
+    "node": ">=12.18"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "npx pkg --out-path build"
+  },
+  "pkg": {
+    "assets": [
+      "bin/**/*"
+    ]
+  },
+  "keywords": [
+    "ink",
+    "inklecate",
+    "watch",
+    "json"
+  ]
+}
