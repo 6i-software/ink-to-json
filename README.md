@@ -26,6 +26,11 @@ As local developpement dependencies:
 $ yarn add @6i/ink-tools --dev
 ```
 
+Or test it with npm package runner
+```sh
+$ npx @6i/ink-tools 
+```
+
 ## Usages
 
 ### Options
@@ -78,6 +83,27 @@ The program can listen for ink file changes and start compilation each time it d
 
 ![ink-tools CLI application](./doc/ink-tools_watch.gif)
 
+### Add into a npm/yarn scripts
+
+You can use npm/yarn as a build tool with npm scripts. They are defined in your `package.json` and allow you to run this script in console with `npm run <script>` or `yarn <script>`. Scripts can run in sequence with `yarn cmd1 && yarn cmd2`, i.e. `cmd2` won't run until `cmd1` is finished. But it can be possible to run in parallel by using another package called [concurrently](https://github.com/kimmobrunfeldt/concurrently) or [npm-run-all](https://github.com/mysticatea/npm-run-all).
+
+You can combine for example ink-tools with [create-react-app](https://github.com/facebook/create-react-app) provides many script to run react web app in development mode, test it or build for production, like this :
+
+```json
+// package.json
+
+(...)
+"scripts": {
+    "start": "concurrently -n INK-TOOLS,REACT -c \"bgBlue.bold,bgMagenta.bold\" \"yarn ink-watch\" \"react-scripts start\" ",
+    "build": "yarn ink-compile && react-scripts build",
+    "test": "yarn ink-compile && react-scripts test",
+    "eject": "react-scripts eject",
+    "ink-compile": "./node_modules/.bin/ink-tools.cmd compile ./ink/my-story.ink",
+    "ink-watch": "./node_modules/.bin/ink-tools.cmd compile ./ink/my-story --watch"
+  }, 
+```
+
+So in development mode, the ink file is compiled before running test `yarn test`, before build application for production `yarn build` and each time is changed in developpement mode `yarn start`.
 
 ## Ink story
 
