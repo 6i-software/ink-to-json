@@ -1,11 +1,11 @@
-ink-tools
-=========
+ink-to-json
+===========
 > Compile inkle's story [Ink](https://github.com/inkle/ink) file into JSON, with watching mode. 
 
 ![ink-tools CLI application](./doc/ink-tools.png)
 
 ## Features
-ink-utils is a CLI application built in node.js with [commander.js](https://github.com/tj/commander.js/). It was designed in order to facilitate its integration wiht [inkjs](https://github.com/y-lohse/inkjs), the javascript implementation of inkle's ink scripting language, and to consume ink story into a web application (SPA, React, Angular ...)
+ink-to-json is a CLI application built in node.js with [commander.js](https://github.com/tj/commander.js/). It was designed in order to facilitate its integration wiht [inkjs](https://github.com/y-lohse/inkjs), the javascript implementation of inkle's ink scripting language, and to consume ink story into a web application (SPA, React, Angular ...)
 
 ink-utils can :
 
