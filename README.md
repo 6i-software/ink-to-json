@@ -1,5 +1,9 @@
 ink-to-json
 ===========
+
+[![LICENSE](https://img.shields.io/badge/license-MIT-informational.svg)](https://github.com/v20100v/6i-Jekyll/blob/develop/LICENSE.md)
+[![Support me by offer me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-donate-informational.svg)](https://www.buymeacoffee.com/vincent.blain)
+
 > Compile inkle's story [Ink](https://github.com/inkle/ink) file into JSON, with watching mode. 
 
 ![ink-tools CLI application](./doc/ink-tools.png)
@@ -111,6 +115,8 @@ So in development mode, the ink file is compiled before running test `yarn test`
 
 ## License
 Release under [MIT](./LICENSE.md) license.
+
+This soft is free and available as open source under the terms of the [MIT License](./LICENSE.md), but if you want to support me, you can [buy me a coffee here](https://www.buymeacoffee.com/vincent.blain) !
 
 ## Copyright
 Copyright (c) 2020 by 2o1oo <vb20100bv@gmail.com>
