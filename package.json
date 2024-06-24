@@ -1,6 +1,6 @@
 {
   "name": "@6i/ink-tools",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Utilities to compile story Ink file into JSON.",
   "main": "index.js",
   "bin": {
